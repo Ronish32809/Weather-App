@@ -20,9 +20,9 @@ function App() {
     }
   }
 
-  // Farenheit to Celcius 
-  const toCelsius = (tempFarenheit) => {
-    return ((tempFarenheit - 32) * 5 / 9).toFixed(2);
+  // Kelvin to Celcius 
+  const toCelsius = (tempKelvin) => {
+    return (tempKelvin - 273).toFixed(2);
   }
 
   return (
@@ -49,10 +49,10 @@ function App() {
               {data.main ? <p>{toCelsius(data.main.temp)}°C</p> : null}
 
               <div className="min-temp">
-                {data.main ? <p>Min: {toCelsius(data.main.temp_min)}°C</p> : null}
+                <span>Min : {data.main ? toCelsius(data.main.temp_min) + "°C" : null} </span>
               </div>
               <div className="max-temp">
-                {data.main ? <p>Max: {toCelsius(data.main.temp_max)}°C</p> : null}
+                <span>Max : {data.main ? toCelsius(data.main.temp_max) + "°C" : null}  </span>
               </div>
             </div>
           </div>

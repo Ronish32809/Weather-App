@@ -2,15 +2,19 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 1.5px;
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
-p {
+p,
+span {
   font-size: 1.5rem;
 }
+
 
 
 .app {
@@ -37,6 +41,7 @@ p {
 .app .search {
   text-align: center;
   padding: 1rem;
+
 }
 
 .app input {
@@ -45,11 +50,12 @@ p {
   border-radius: 25px;
   border: 1px solid rgba(255, 255, 255, 0.8);
   background: rgba(255, 255, 255, 0.1);
+  color: #f8f8f8;
 
 }
 
 ::placeholder {
-  color: #050506;
+  color: #f8f8f8;
 }
 
 .container {
@@ -58,7 +64,7 @@ p {
   margin: auto;
   position: relative;
   top: 5%;
-  background-color: rgba(168, 205, 239, .6);
+  background-color: rgba(53, 53, 53, 0.6);
   padding: 1rem;
   display: flex;
   gap: 1rem;
@@ -74,11 +80,14 @@ p {
   /* justify-content: space-around; */
 }
 
+
 .left-container {
   display: flex;
   flex-direction: row;
   margin-left: 30px;
   width: 35%;
+
+  flex-wrap: wrap;
 }
 
 .temp {
@@ -92,6 +101,7 @@ p {
   margin-left: 70px;
   border-left: 10px solid white;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 
